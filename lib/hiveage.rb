@@ -1,14 +1,19 @@
 require 'active_resource'
 
-# require 'hashie'
-# require 'httparty'
-# require 'json'
-
 require "hiveage/config"
 require "hiveage/base"
 require "hiveage/version"
 require "hiveage/network"
+require "hiveage/contact"
+require "hiveage/item_category"
+require "hiveage/task_category"
+require "hiveage/expense_category"
+require "hiveage/trip_category"
+require "hiveage/invoice"
+require "hiveage/invoice_payment"
+require "hiveage/estimate"
+require "hiveage/recurring_invoice"
 
 module Hiveage
-  # Your code goes here...
+  extend Config
 end
