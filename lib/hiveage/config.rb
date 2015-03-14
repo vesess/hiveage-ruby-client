@@ -1,25 +1,25 @@
+require "hiveage/base"
+
 module Hiveage
-  class Config
-    @@api_key = "your_api_key"
-    @@subdomain = "subdomain"
-    @@use_https = true 
+  module Config
+    attr_accessor :api_key, :subdomain, :site
 
-    class << self
-      def api_key=(api_key)
-        @@api_key = api_key
-      end
+    def configure
+      yield self
 
-      def api_key
-        @@api_key
-      end
+      Base.site      = "http://#{self.subdomain}.hiveage.local:3000/api"
+      Base.user      = self.api_key
+      Base.password  = ''
+      Base.format    = :json
 
-      def subdomain=(subdomain)
-        @@subdomain = subdomain
-      end
-
-      def subdomain
-        @@subdomain
-      end
+      self
     end
+
   end
 end
+
+=begin
+Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
+
+Hiveage::Network.find('PhA7mXDfMzEyLg')
+=end
