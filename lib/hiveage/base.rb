@@ -19,7 +19,6 @@ module Hiveage
           resource.modify!(path)
         end
       end
-      
     end
 
     def modify!(path)
