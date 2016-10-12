@@ -8,5 +8,6 @@ group :test do
   gem 'rake'
   gem 'fakeweb'
   gem 'minitest'
+  gem 'mocha'
+  gem 'shoulda-context'
 end
-
