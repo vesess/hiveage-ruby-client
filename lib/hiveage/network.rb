@@ -52,7 +52,6 @@ end
 
 Hiveage::Network.all(params: {per_page: 60})
 
-
 # Modify Contact 
 Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
 b=Hiveage::Network.find('dvsIYJgWrOJoxw')

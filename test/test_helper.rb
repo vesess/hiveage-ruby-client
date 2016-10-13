@@ -1,19 +1,8 @@
-#require_relative '../lib/hiveage'
 require 'hiveage'
 require 'minitest/autorun'
 require 'shoulda/context'
 require 'mocha/setup'
-
-#require 'mocha/test_unit'
-#require 'minitest/autorun'
-#require 'webmock/minitest'
-#require 'vcr'
-
-#VCR config
-# VCR.config do |c|
-#   c.cassette_library_dir = 'spec/fixtures'
-#   c.stub_with :webmock
-# end
+require File.expand_path('../test_data', __FILE__)
 
 module Hiveage
   @mock_rest_client = nil
@@ -29,12 +18,12 @@ module Hiveage
 end
 
 class Minitest::Test
+  include Hiveage::TestData
   include Mocha
 
   def setup
     @mock = mock
     Hiveage.mock_rest_client = @mock
-    Hiveage.api_key = "foo"
   end
 
   def teardown
