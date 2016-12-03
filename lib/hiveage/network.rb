@@ -47,32 +47,3 @@ module Hiveage
     end
   end
 end
-
-=begin
-
-Hiveage::Network.all(params: {per_page: 60})
-
-# Modify Contact 
-Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
-b=Hiveage::Network.find('dvsIYJgWrOJoxw')
-c = b.contacts.last
-b.modify_contact(c.id, {first_name: "Nuwan1"})
-
-# Find Contact 
-Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
-b=Hiveage::Network.find('dvsIYJgWrOJoxw')
-c = b.contacts.last
-c=b.find_contact(c.id)
-
-# Create Contact
-Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
-b=Hiveage::Network.find('dvsIYJgWrOJoxw')
-c = b.create_contact({hash_key: "dvsIYJgWrOJoxw", first_name: "DD", email: "Nuwan@gmail.com"})
-
-# Delete Contact
-Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
-b=Hiveage::Network.find('dvsIYJgWrOJoxw')
-c = b.contacts.last
-b.destroy_contact(c.id)
-
-=end

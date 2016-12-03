@@ -31,11 +31,24 @@ module Hiveage
 
     ## Deliver
     def deliver
-      response = post(:deliver)
+      post(:deliver)
     end
 
     def reminder
-      response = post(:reminder)
+      post(:reminder)
+    end
+
+    ## Actions
+    def mark_as_sent
+      post(:mark_as_sent)
+    end
+
+    def archive
+      post(:archive)
+    end
+
+    def unarchive
+      post(:unarchive)
     end
   end
 end

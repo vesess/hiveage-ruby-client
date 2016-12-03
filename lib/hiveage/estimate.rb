@@ -10,7 +10,16 @@ module Hiveage
 
     ## Deliver
     def deliver
-      response = post(:deliver)
+      post(:deliver)
+    end
+
+    ## Actions
+    def mark_as_sent
+      post(:mark_as_sent)
+    end
+
+    def mark_as_accept
+      post(:mark_as_accept)
     end
   end
 end
