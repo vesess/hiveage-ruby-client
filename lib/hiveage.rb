@@ -13,6 +13,8 @@ require "hiveage/invoice"
 require "hiveage/invoice_payment"
 require "hiveage/estimate"
 require "hiveage/recurring_invoice"
+require "hiveage/bill"
+require "hiveage/recurring_bill"
 
 module Hiveage
   extend Config

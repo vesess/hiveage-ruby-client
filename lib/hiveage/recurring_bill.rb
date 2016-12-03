@@ -1,17 +1,17 @@
 module Hiveage
-  class RecurringInvoice < Hiveage::Base
+  class RecurringBill < Hiveage::Base
     alias :update_attributes :modify
     
-    self.collection_name = "rinv"
+    self.collection_name = "rbill"
 
     def to_param
       hash_key 
     end
 
-    def invoices(params={})
-      response = get(:invoices, params)
+    def bills(params={})
+      response = get(:bills, params)
 
-      Invoice.send(:instantiate_collection, response)
+      Bill.send(:instantiate_collection, response)
     end
 
     def activate
