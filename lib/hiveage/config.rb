@@ -17,9 +17,3 @@ module Hiveage
 
   end
 end
-
-=begin
-Hiveage.configure do |c|; c.api_key ='ZaKLS4k9Bi91bzRUX78g'; c.subdomain = 'test';end
-
-Hiveage::Network.find('PhA7mXDfMzEyLg')
-=end

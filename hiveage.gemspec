@@ -33,6 +33,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday"
   spec.add_dependency "hashie"
   spec.add_dependency "json"
-
-  spec.test_files = Dir.glob("test/**/*.rb")
 end
