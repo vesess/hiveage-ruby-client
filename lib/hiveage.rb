@@ -15,6 +15,9 @@ require "hiveage/estimate"
 require "hiveage/recurring_invoice"
 require "hiveage/bill"
 require "hiveage/recurring_bill"
+require "hiveage/time_entry"
+require "hiveage/expense_entry"
+require "hiveage/mileage_entry"
 
 module Hiveage
   extend Config
